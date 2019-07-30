@@ -1,1 +1,24 @@
 <!-- Put the HTML template for your page here! -->
+<!DOCTYPE html>
+<html>
+<head>
+	<Link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+	<title>asd</title>
+	<h1>food</h1>
+</head>
+<body>
+	<p>alsdjlkjlkjaslkadslksadlkjdaskljdaksljdajslksakjl fooooodd</p>
+	{{list1}}
+	{%if opposite_day%}
+		{%for i in least_fav_food%}
+		<p>{{i}}</p>
+		{%endfor%}
+
+
+	{%else%}
+		{%for i in list1%}
+		<p>{{i}}</p>
+		{%endfor%}
+	{%endif%}
+</body>
+</html>
